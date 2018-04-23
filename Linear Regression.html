@@ -11787,7 +11787,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[67]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="o">%</span><span class="k">matplotlib</span> inline
@@ -11814,18 +11814,18 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[68]:</div>
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ReadData</span><span class="p">(</span><span class="n">data</span><span class="p">,</span><span class="n">separator</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ReadData</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">separator</span><span class="p">):</span>
     
-    <span class="n">XY</span> <span class="o">=</span>  <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">separator</span><span class="p">)</span>
-    <span class="n">m</span><span class="o">=</span><span class="n">XY</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
-    <span class="n">Y</span><span class="o">=</span><span class="n">XY</span><span class="p">[:,</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">m</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-    <span class="n">X</span><span class="o">=</span><span class="n">XY</span><span class="p">[:,</span><span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
-    <span class="n">bias</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">1</span><span class="p">))</span>
-    <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span><span class="mi">1</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">bias</span><span class="p">,</span><span class="n">theta</span>
+    <span class="n">XY</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">genfromtxt</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="n">separator</span><span class="p">)</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="n">XY</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+    <span class="n">Y</span> <span class="o">=</span> <span class="n">XY</span><span class="p">[:,</span> <span class="o">-</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="n">m</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="n">X</span> <span class="o">=</span> <span class="n">XY</span><span class="p">[:,</span> <span class="mi">0</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+    <span class="n">bias</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="n">theta</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="n">X</span><span class="o">.</span><span class="n">shape</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="mi">1</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">theta</span>
 </pre></div>
 
 </div>
@@ -11843,15 +11843,15 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[69]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">Normalize</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
     
     <span class="n">Mu</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
     <span class="n">Sigma</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">std</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-    <span class="n">data</span><span class="o">=</span><span class="p">((</span><span class="n">data</span><span class="o">-</span><span class="n">Mu</span><span class="p">)</span><span class="o">/</span><span class="n">Sigma</span><span class="p">)</span>
-    <span class="k">return</span> <span class="n">data</span><span class="p">,</span><span class="n">Mu</span><span class="p">,</span><span class="n">Sigma</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="p">((</span><span class="n">data</span><span class="o">-</span><span class="n">Mu</span><span class="p">)</span><span class="o">/</span><span class="n">Sigma</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">data</span><span class="p">,</span> <span class="n">Mu</span><span class="p">,</span> <span class="n">Sigma</span>
 </pre></div>
 
 </div>
@@ -11869,20 +11869,20 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[70]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">GradDescent_CostCalc</span><span class="p">(</span><span class="n">iter1</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">bias</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">learningratebym</span><span class="p">,</span><span class="n">costweight</span><span class="p">):</span>
-    <span class="n">costs</span><span class="o">=</span><span class="p">[]</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">GradDescent_CostCalc</span><span class="p">(</span><span class="n">iter1</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">learningratebym</span><span class="p">,</span> <span class="n">costweight</span><span class="p">):</span>
+    <span class="n">costs</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">iter1</span><span class="p">):</span>
-        <span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">bias</span>
+        <span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">bias</span>
         <span class="n">diff</span> <span class="o">=</span> <span class="n">H</span> <span class="o">-</span> <span class="n">Y</span>
-        <span class="n">delta</span> <span class="o">=</span> <span class="n">learningratebym</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">diff</span><span class="o">.</span><span class="n">T</span><span class="p">,</span><span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
+        <span class="n">delta</span> <span class="o">=</span> <span class="n">learningratebym</span> <span class="o">*</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">diff</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">X</span><span class="p">)</span><span class="o">.</span><span class="n">T</span>
         <span class="n">theta</span> <span class="o">=</span> <span class="n">theta</span> <span class="o">-</span> <span class="n">delta</span>
         <span class="n">bias</span> <span class="o">=</span> <span class="n">bias</span> <span class="o">-</span> <span class="p">(</span><span class="n">learningratebym</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="n">diff</span><span class="p">))</span>
         <span class="n">J</span> <span class="o">=</span> <span class="n">costweight</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">diff</span><span class="p">))</span>
         <span class="n">costs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">J</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-    <span class="k">return</span> <span class="n">costs</span><span class="p">,</span><span class="n">bias</span><span class="p">,</span><span class="n">theta</span>
+    <span class="k">return</span> <span class="n">costs</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">theta</span>
 </pre></div>
 
 </div>
@@ -11900,12 +11900,12 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[71]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">CostCalc</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">bias</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">costweight</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">CostCalc</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">costweight</span><span class="p">):</span>
 
-    <span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">bias</span>
+    <span class="n">H</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">theta</span><span class="p">)</span> <span class="o">+</span> <span class="n">bias</span>
     <span class="n">diff</span> <span class="o">=</span> <span class="n">H</span> <span class="o">-</span> <span class="n">Y</span>
     <span class="n">J</span> <span class="o">=</span> <span class="n">costweight</span> <span class="o">*</span> <span class="nb">sum</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">square</span><span class="p">(</span><span class="n">diff</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">J</span>
@@ -11926,21 +11926,21 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[72]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">PlotData</span><span class="p">(</span><span class="n">Original_X</span><span class="p">,</span><span class="n">Normalized_X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">trainedtheta</span><span class="p">,</span><span class="n">trainedbias</span><span class="p">,</span><span class="n">costs</span><span class="p">,</span><span class="n">fignumber</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">PlotData</span><span class="p">(</span><span class="n">Original_X</span><span class="p">,</span> <span class="n">Normalized_X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">trainedtheta</span><span class="p">,</span> <span class="n">trainedbias</span><span class="p">,</span> <span class="n">costs</span><span class="p">,</span> <span class="n">fignumber</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">style</span><span class="o">.</span><span class="n">use</span><span class="p">(</span><span class="s1">&#39;ggplot&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">fignumber</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">211</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Original_X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="s1">&#39;r+&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Original_X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="s1">&#39;r+&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Label&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Feature&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Original_X</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Normalized_X</span><span class="p">,</span><span class="n">trainedtheta</span><span class="p">)</span> <span class="o">+</span> <span class="n">trainedbias</span><span class="p">),</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">Original_X</span><span class="p">,</span> <span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">Normalized_X</span><span class="p">,</span> <span class="n">trainedtheta</span><span class="p">)</span> <span class="o">+</span> <span class="n">trainedbias</span><span class="p">),</span> <span class="s1">&#39;b-&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">212</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Cost&#39;</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Iteration&#39;</span><span class="p">)</span>
-    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">iter1</span><span class="p">),</span><span class="n">costs</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="n">iter1</span><span class="p">),</span> <span class="n">costs</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -11958,18 +11958,18 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[73]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ContourPlot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">costweight</span><span class="p">,</span><span class="n">plotspace_x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="n">plotspace_y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">):</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">ContourPlot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">costweight</span><span class="p">,</span> <span class="n">plotspace_x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span> <span class="n">plotspace_y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">):</span>
     <span class="n">bias_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">plotspace_x</span><span class="p">,</span> <span class="n">plotspace_y</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
     <span class="n">theta_vals</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">linspace</span><span class="p">(</span><span class="n">plotspace_x</span><span class="p">,</span> <span class="n">plotspace_y</span><span class="p">,</span> <span class="mi">100</span><span class="p">)</span>
-    <span class="n">costs</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">bias_vals</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">theta_vals</span><span class="p">)))</span>
+    <span class="n">costs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">bias_vals</span><span class="p">),</span><span class="nb">len</span><span class="p">(</span><span class="n">theta_vals</span><span class="p">)))</span>
     <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">bias_vals</span><span class="p">)):</span>
         <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">theta_vals</span><span class="p">)):</span>
             <span class="c1">##costs[j][i] because contour plot needs costs[i][j] Transpose</span>
-            <span class="n">costs</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">CostCalc</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">theta_vals</span><span class="p">[</span><span class="n">j</span><span class="p">],</span><span class="n">bias_vals</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="n">Y</span><span class="p">,</span><span class="n">costweight</span><span class="p">)</span>
-    <span class="n">X</span> <span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">bias_vals</span><span class="p">,</span> <span class="n">theta_vals</span><span class="p">)</span>
+            <span class="n">costs</span><span class="p">[</span><span class="n">j</span><span class="p">][</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">CostCalc</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">theta_vals</span><span class="p">[</span><span class="n">j</span><span class="p">],</span> <span class="n">bias_vals</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="n">Y</span><span class="p">,</span> <span class="n">costweight</span><span class="p">)</span>
+    <span class="n">X</span><span class="p">,</span> <span class="n">Y</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">meshgrid</span><span class="p">(</span><span class="n">bias_vals</span><span class="p">,</span> <span class="n">theta_vals</span><span class="p">)</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
     <span class="n">CS</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">contour</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">costs</span><span class="p">,</span> <span class="n">np</span><span class="o">.</span><span class="n">logspace</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="mi">20</span><span class="p">))</span>
     <span class="n">plt</span><span class="o">.</span><span class="n">clabel</span><span class="p">(</span><span class="n">CS</span><span class="p">,</span> <span class="n">inline</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">10</span><span class="p">)</span>
@@ -11978,7 +11978,7 @@ div#notebook {
     <span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta_0$&#39;</span><span class="p">)</span>
     <span class="n">fig</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
     <span class="n">ax</span> <span class="o">=</span> <span class="n">fig</span><span class="o">.</span><span class="n">gca</span><span class="p">(</span><span class="n">projection</span><span class="o">=</span><span class="s1">&#39;3d&#39;</span><span class="p">)</span>
-    <span class="n">surf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">costs</span><span class="p">,</span><span class="n">rstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;PuBu_r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">antialiased</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+    <span class="n">surf</span> <span class="o">=</span> <span class="n">ax</span><span class="o">.</span><span class="n">plot_surface</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">costs</span><span class="p">,</span> <span class="n">rstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cstride</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">cmap</span><span class="o">=</span><span class="s1">&#39;PuBu_r&#39;</span><span class="p">,</span> <span class="n">linewidth</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">antialiased</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_xlabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta_0$&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_ylabel</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;$\theta_1$&#39;</span><span class="p">)</span>
     <span class="n">ax</span><span class="o">.</span><span class="n">set_zlabel</span><span class="p">(</span><span class="s1">&#39;Costs Surface Plot&#39;</span><span class="p">)</span>
@@ -12000,24 +12000,24 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[74]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">m</span><span class="p">,</span><span class="n">bias</span><span class="p">,</span><span class="n">theta</span> <span class="o">=</span> <span class="n">ReadData</span><span class="p">(</span><span class="s1">&#39;1DDS.txt&#39;</span><span class="p">,</span><span class="s1">&#39;,&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">theta</span> <span class="o">=</span> <span class="n">ReadData</span><span class="p">(</span><span class="s1">&#39;1DDS.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;,&#39;</span><span class="p">)</span>
 <span class="n">Original_X</span> <span class="o">=</span> <span class="n">X</span>
-<span class="n">X</span><span class="p">,</span><span class="n">Mu</span><span class="p">,</span><span class="n">Sigma</span> <span class="o">=</span> <span class="n">Normalize</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
+<span class="n">X</span><span class="p">,</span> <span class="n">Mu</span><span class="p">,</span> <span class="n">Sigma</span> <span class="o">=</span> <span class="n">Normalize</span><span class="p">(</span><span class="n">X</span><span class="p">)</span>
 <span class="n">learningrate</span> <span class="o">=</span> <span class="mf">0.01</span>
 <span class="n">iter1</span> <span class="o">=</span> <span class="mi">1500</span>
-<span class="n">learningratebym</span><span class="o">=</span> <span class="n">learningrate</span><span class="o">/</span><span class="n">m</span>
+<span class="n">learningratebym</span> <span class="o">=</span> <span class="n">learningrate</span><span class="o">/</span><span class="n">m</span>
 <span class="n">costweight</span> <span class="o">=</span> <span class="mi">1</span><span class="o">/</span><span class="p">(</span><span class="mi">2</span><span class="o">*</span><span class="n">m</span><span class="p">)</span>
-<span class="n">costs</span><span class="p">,</span><span class="n">trainedbias</span><span class="p">,</span><span class="n">trainedtheta</span> <span class="o">=</span> <span class="n">GradDescent_CostCalc</span><span class="p">(</span><span class="n">iter1</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">theta</span><span class="p">,</span><span class="n">bias</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span>
-                                                      <span class="n">learningratebym</span><span class="p">,</span><span class="n">costweight</span><span class="p">)</span>
-<span class="n">PlotData</span><span class="p">(</span><span class="n">Original_X</span><span class="p">,</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">trainedtheta</span><span class="p">,</span><span class="n">trainedbias</span><span class="p">,</span><span class="n">costs</span><span class="p">)</span>
-<span class="n">ContourPlot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span><span class="n">Y</span><span class="p">,</span><span class="n">costweight</span><span class="p">,</span><span class="n">plotspace_x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="n">plotspace_y</span> <span class="o">=</span> <span class="mi">20</span><span class="p">)</span>
-<span class="n">actual_input</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">7.5</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">normalized_input</span><span class="o">=</span><span class="p">(</span><span class="n">actual_input</span><span class="o">-</span><span class="n">Mu</span><span class="p">)</span><span class="o">/</span><span class="n">Sigma</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;For population = </span><span class="si">{}</span><span class="s1">, we predict a profit of </span><span class="si">{}</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
-             <span class="n">actual_input</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10000</span><span class="p">,(</span><span class="n">trainedbias</span> <span class="o">+</span> <span class="n">np</span><span class="o">.</span><span class="n">dot</span><span class="p">(</span><span class="n">normalized_input</span><span class="p">,</span><span class="n">trainedtheta</span><span class="p">))</span><span class="o">.</span><span class="n">item</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">*</span> <span class="mi">10000</span><span class="p">))</span>
+<span class="n">costs</span><span class="p">,</span> <span class="n">trainedbias</span><span class="p">,</span> <span class="n">trainedtheta</span> <span class="o">=</span> <span class="n">GradDescent_CostCalc</span><span class="p">(</span><span class="n">iter1</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">theta</span><span class="p">,</span> <span class="n">bias</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span>
+                                                        <span class="n">learningratebym</span><span class="p">,</span> <span class="n">costweight</span><span class="p">)</span>
+<span class="n">PlotData</span><span class="p">(</span><span class="n">Original_X</span><span class="p">,</span> <span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">trainedtheta</span><span class="p">,</span> <span class="n">trainedbias</span><span class="p">,</span> <span class="n">costs</span><span class="p">)</span>
+<span class="n">ContourPlot</span><span class="p">(</span><span class="n">X</span><span class="p">,</span> <span class="n">Y</span><span class="p">,</span> <span class="n">costweight</span><span class="p">,</span> <span class="n">plotspace_x</span><span class="o">=-</span><span class="mi">10</span><span class="p">,</span> <span class="n">plotspace_y</span><span class="o">=</span><span class="mi">20</span><span class="p">)</span>
+<span class="n">actual_input</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">([</span><span class="mf">7.5</span><span class="p">])</span><span class="o">.</span><span class="n">reshape</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+<span class="n">normalized_input</span> <span class="o">=</span> <span class="p">(</span><span class="n">actual_input</span><span class="o">-</span><span class="n">Mu</span><span class="p">)</span><span class="o">/</span><span class="n">Sigma</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f</span><span class="s1">&#39;For population = {actual_input.item(0) * 10000},&#39;</span>
+      <span class="n">f</span><span class="s1">&#39; we predict a profit of {(trainedbias + np.dot(normalized_input, trainedtheta)).item(0) * 10000}&#39;</span><span class="p">)</span>
 <span class="c1">#plt.show()</span>
 </pre></div>
 
