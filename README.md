@@ -92,6 +92,8 @@
           >IMDB Review Sentiment Classification</a
         >
       </li>
+      <li><a href="https://git.io/fjGRD" target="_blank">Haptik ML Classification Challenge</a>
+      </li>
     </ul>
     <li>BFSI</li>
     <ul>
